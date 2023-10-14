@@ -8,7 +8,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 100hv;
+    background: url('https://images.unsplash.com/photo-1524334228333-0f6db392f8a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
 }
+ @media(max-width: 991px) {
+    .container .sidebar{
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+} 
+
 
 .contenedor{
     display: flex;
@@ -16,19 +24,17 @@ body {
     justify-content: space-between;
 }
 .card{
-    border: solid 2px #000;
+    margin-top: 30px;
 }
-.image{
+
+.card-img-top{
     width: 270px;
     height: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-img{
-    height: 240px;
-    width: auto;
-}
+
 h3, p, h2{
     text-align: center;
     color: #444;
@@ -37,27 +43,20 @@ p{
     margin-top: 10px;
     padding: 0px 5px;
 }
-h2{
+.card-body h2{
     margin-top: 10px;
-    color: #00cbfe;
+    border: solid 1px #bbb;
+    color: #000;
 }
-.box{
+.card-body a{
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #00cbfe;
 }
-button{
-    border: none;
-    background: none;
-    color: white;
-    font-size: 10px;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
+.navbar{
+    display: flex;
+    justify-content: space-between;
 }
-button:hover{
-    background-color: aqua;
-}
+

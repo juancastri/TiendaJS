@@ -6,6 +6,7 @@ async function ObtenerProductos() {
             throw new Error('Error al obtener productos');
         }
         const data = await response.json();
+        console.log(data);
         return data; // Devolver los datos obtenidos
     } catch (error) {
         console.error(error);
@@ -19,18 +20,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     const products = await ObtenerProductos(); // Esperar a que la función ObtenerProductos termine
 
     if (products.length > 0) {
+        /* localStorage.setItem('product_${product.id}', JSON.stringify(product)) */ //CORREGIR (DEJA DE MOSTRAR LOS PRODUCTOS)
         let productos = "";
         products.forEach(product => {
+            
             productos += `
-                <div class="card" style="width: 18rem">
-                    <img src="${product.image}" class="image"/>
+                <div class="card" style="width: 18rem;">
+                    <img src="${product.image}" class="card-img-top">
                     <div class="card-body">
                         <h3 class="card-title">${product.title}</h3>
                         <p class="card-text">${product.description}</p>
                         <h2>${product.price}</h2>
-                        <div class="box">
-                            <button>Ver detalle</button>
-                        </div>
+                        <a href="/detalleProducto.html?id=${product.id}" class="btn btn-primary">Ver detalle</a>
                     </div>
                 </div>
             `;
