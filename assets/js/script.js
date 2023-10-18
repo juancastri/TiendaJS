@@ -20,10 +20,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const products = await ObtenerProductos(); // Esperar a que la función ObtenerProductos termine
 
     if (products.length > 0) {
-        /* localStorage.setItem('product_${product.id}', JSON.stringify(product)) */ //CORREGIR (DEJA DE MOSTRAR LOS PRODUCTOS)
         let productos = "";
         products.forEach(product => {
-            
+            localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
             productos += `
                 <div class="card" style="width: 18rem;">
                     <img src="${product.image}" class="card-img-top">
