@@ -41,10 +41,47 @@ if (productJSON) {
   // Muestra los detalles del producto en la página
   const detallesContainer = document.querySelector(".detalles-producto");
   detallesContainer.innerHTML = `
-     <h2>${product.title}</h2>
-     <img src="${product.image}" alt="${product.title}" style="width: 232px">
-     <p><strong>Precio:</strong> $${product.price}</p>
-     <p><strong>Descripción:</strong> ${product.description}</p>
+        <div class="content">
+          <div class="details">
+            <div class="details-image">
+              <img src="${product.image}"
+            </div>
+            <div class="details-info">
+              <ul>
+                <li>
+                  <h1>${product.title}</h1>
+                </li>
+                <li>
+                  Precio: <strong>$${product.price}</strong>
+                </li>
+                <li>
+                  Descripción: 
+                  <div>
+                    ${product.description}
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="details-action">
+              <ul>
+                <li>
+                  Price: $${product.price}
+                </li>
+                <li>
+                  Estado: 
+                  ${
+                    product.count > 0 
+                    ? `<span class="sucess">Disponible</span>`
+                    : '<span class="error">Agotado</span>'
+                  }
+                </li>
+                <li>
+                  <button id="add-button" class="Prymary">Add to Cart</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
    `;
 } else {
   // Si el producto no está en localStorage, muestra un mensaje de que no se ha encontrado.

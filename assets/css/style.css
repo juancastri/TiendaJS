@@ -40,11 +40,16 @@ div.logotipo{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 10px;
 }
 
 
 .card{
     margin-top: 30px;
+}
+
+div .card{
+    border: 0;
 }
 
 .card-img-top{
@@ -57,16 +62,19 @@ div.logotipo{
 
 h3, p, h2{
     text-align: center;
-    color: #444;
+    padding-top: 38px;
+    font-family: Muli, sans-serif;
+    line-height: 23px;
+    color: #202223;
 }
 p{
     margin-top: 10px;
     padding: 0px 5px;
 }
 .card-body h2{
-    margin-top: 10px;
-    border: solid 1px #bbb;
-    color: #000;
+    margin-top: -40px;
+    color: #6E7276;
+    font-size: 19px;
 }
 .card-body a{
     width: 100%;
@@ -108,4 +116,15 @@ p{
 div .encabezado{
     transform: translate(38%);
     padding-top: 10px;
+}
+
+footer.footer{
+    background-color: #000;
+    color: white;
+    height: 36px;
+    text-align: center;
+    font-family: serif;
+    letter-spacing: .2em;
+    font-size: 16px;
+    line-height: 36px;
 }

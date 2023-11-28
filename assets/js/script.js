@@ -24,12 +24,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
         productos += `
             <div class="card" style="width: 18rem;">
-                <img src="${product.image}" class="card-img-top">
+                <a href="/detalleProducto.html?id=${product.id}">
+                    <img src="${product.image}" class="card-img-top">
+                </a>
                 <div class="card-body">
-                    <h3 class="card-title">${product.title}</h3>
+                    <h2 class="card-title">${product.title}</h2>
                     <p class="card-text">${product.description}</p>
                     <h2>${product.price}</h2>
-                    <a href="/detalleProducto.html?id=${product.id}" class="btn btn-primary">Ver detalle</a>
                 </div>
             </div>
         `;
