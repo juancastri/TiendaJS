@@ -55,10 +55,7 @@ if (productJSON) {
                   Precio: <strong>$${product.price}</strong>
                 </li>
                 <li>
-                  Descripción: 
-                  <div>
-                    ${product.description}
-                  </div>
+                  Descripción: <div>${product.description}</div>
                 </li>
               </ul>
             </div>
@@ -70,13 +67,13 @@ if (productJSON) {
                 <li>
                   Estado: 
                   ${
-                    product.count > 0 
-                    ? `<span class="sucess">Disponible</span>`
+                    product.rating.count > 0 
+                    ? `<span class="success">Disponible</span>`
                     : '<span class="error">Agotado</span>'
                   }
                 </li>
                 <li>
-                  <button id="add-button" class="Prymary">Add to Cart</button>
+                  <button id="agregarAlCarrito" class="fw primary">Agregar al carrito</button>
                 </li>
               </ul>
             </div>

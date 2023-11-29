@@ -1,0 +1,21 @@
+/* Detalle Producto */
+.content{
+    padding: 1rem;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.details-image{
+    flex: 2 1 60rem;
+    display: flex;
+}
+.details-image img{
+    max-width: 60rem;
+    width: 100%;
+}
+.details-info, .details-action{
+    flex: 1 1 30rem;
+}

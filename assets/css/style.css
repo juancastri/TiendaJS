@@ -123,8 +123,112 @@ footer.footer{
     color: white;
     height: 36px;
     text-align: center;
-    font-family: serif;
+    font-family: Muli, sans-serif;
     letter-spacing: .2em;
     font-size: 16px;
     line-height: 36px;
+}
+
+/* Detalle Producto */
+.content{
+    padding: 1rem;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.details-image{
+    flex: 2 1 60rem;
+    display: flex;
+}
+.details-image img{
+    max-width: 60rem;
+    width: 620px;
+}
+div .details-info{
+    padding-left: 1rem;
+}
+.details-info, .details-action{
+    flex: 1 1 30rem;
+}
+.details-info ul, .details-action ul {
+    padding: 0;
+    list-style-type: none;
+}
+.details-info h1{
+    font-size: 2rem;
+    margin: 0;
+}
+.details-info li, .details-action li {
+    margin-bottom: 1rem;
+}
+.details-action{
+    border: 0.1rem #6E7276 solid;
+    border-radius: 0.5rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    height: 12rem;
+}
+button{
+    font: 1.6rem helvetica;
+    padding: 1rem;
+    border: 0.1rem #808080 solid;
+    border-radius: 0.5rem;
+}
+button:hover{
+    border: 0.1rem #404040 solid;
+}
+button.primary{
+    background-color: rgb(212, 175, 55);
+}
+.fw{
+    width: 100%;
+}
+.success{
+    color: #40c040;
+}
+.error{
+    color: #c04040;
+}
+
+/* Carrito de compras */
+ul #carritoLista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#carritoLista li{
+    list-style: none;
+    width: 90%;
+    border: 1px solid #c1c2ca;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+}
+
+
+ul .textContainer {
+    justify-content: space-between;
+    display: flex;
+}
+
+ul li div div {
+    padding-left: 12rem;
+}
+
+.contentContainer {
+    display: flex;
+}
+
+.buttonsContainer{
+    display: flex;
+    align-items: center;
 }
